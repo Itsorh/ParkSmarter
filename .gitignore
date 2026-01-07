@@ -1,0 +1,20 @@
+# OS files
+.DS_Store
+Thumbs.db
+
+# Node (only if you use npm for tooling)
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# Logs
+*.log
+
+# Editor files
+.vscode/
+*.swp
+*.swo
+
+# Build/Output directories (if you add tooling later)
+dist/
+build/
