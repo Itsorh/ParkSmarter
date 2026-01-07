@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>{{ page.title }} - Park Smarter</title>
+
+  <!-- Fonts -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=BabasNeue&display=swap">
+
+  <!-- Meta description -->
+  <meta name="Description"
+        content="Derbyshire County Council have taken over responsibilities for enforcing parking restrictions on the streets of Derbyshire (excluding Derby City).">
+
+  <!-- Use baseurl so project pages work -->
+  <link rel="stylesheet" href="{{ site.baseurl }}/Assets/css/style.css">
+  <script src="{{ site.baseurl }}/Assets/js/main.js"></script>
+</head>
+
+<body>
+  <div id="wrapper">
+    {% include header.html %}
+    {{ content }}
+  </div>
+
+  {% include footer.html %}
+</body>
+</html>
