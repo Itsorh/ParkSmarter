@@ -18,3 +18,10 @@ yarn-error.log
 # Build/Output directories (if you add tooling later)
 dist/
 build/
+
+Gemfile
+Gemfile.lock
+
+_site/
+.sass-cache/
+.jekyll-cache/
