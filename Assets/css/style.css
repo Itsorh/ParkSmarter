@@ -22,7 +22,7 @@ body {
     justify-content: space-between;
     padding: 20px;
     gap: 20px;
-    background-color: #4747D4;
+    background-color: #213448;
     flex-wrap: wrap;
 }
 
@@ -32,10 +32,10 @@ body {
 }
 
 #TopBanner h1 {
+    font-family: 'BabasNeau', sans-serif;
     margin: 0;
     font-size: 2rem;
     color: white;
-    font-weight: bolder;
     font-size:xx-large;
 }
 
@@ -59,7 +59,7 @@ body {
 
     #TopBanner p {
         font-size: x-large;
-        font-weight: bolder;
+        font-weight: bold;
     }
 }
 
@@ -73,8 +73,8 @@ body {
     justify-content: space-between;
     gap: 1rem;
     padding: 0.75rem 1rem;
-    background: #4747D4;
-    border-bottom: 1px solid #4747D4;
+    background: #547792;
+    border-bottom: 1px solid #547792;
 }
 
 .topbanner .left {
@@ -88,6 +88,13 @@ body {
     width: auto;
     display: block;
 }
+
+.left-link {
+    text-decoration: none;
+    color: inherit;
+    display: inline-block; /* or block if you want full-width */
+}
+
 
 .topbanner .tagline,
 .topbanner .tagline p{
@@ -125,7 +132,7 @@ body {
 /* ----------------------------- */
 
 #topnav {
-    background: #4747D4;
+    background: #547792;
     padding: 0.5rem 1rem;
     margin-top: 0;
 }
@@ -156,6 +163,7 @@ body {
 #topnav ul li a {
     display: block;
     color: white;
+    font-family: 'BabasNeau', sans-serif;
     text-decoration: none;
     font-weight: bold;
     transition: color 0.25s ease;
