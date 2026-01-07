@@ -5,10 +5,9 @@
         <h1>Park Smarter</h1>
     </div>
 </a>
-            <p class="tagline">Making Derbyshire roads safer...</p>
         </header>
-
 <nav id="topnav">
+  <button class="menu-toggle">&#9776;</button>  <!-- Hamburger icon-->
   <ul>
     <li><a href="{{ site.baseurl }}/pay-pcn.html">Pay PCN</a></li>
     <li><a href="{{ site.baseurl }}/dispute-pcn.html">Dispute PCN</a></li>
@@ -18,6 +17,12 @@
     <li><a href="{{ site.baseurl }}/what-we-do.html">What we do</a></li>
     <li><a href="{{ site.baseurl }}/our-officers.html">Our officers</a></li>
     <li><a href="{{ site.baseurl }}/our-partners.html">Our partners</a></li>
-    <li><a href="{{ site.baseurl }}/contact-us.html">Contact us</a></li>
   </ul>
 </nav>
+
+
+<script>
+document.querySelector('.menu-toggle').addEventListener('click', function() {
+    document.querySelector('#topnav ul').classList.toggle('show');
+});
+</script>
