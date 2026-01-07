@@ -37,7 +37,7 @@ body {
 }
 
 /* Mobile layout for #TopBanner */
-@media (max-width: 400px) {
+@media (max-width: 424px) {
     #TopBanner {
         flex-direction: column;
         text-align: center;
@@ -50,8 +50,6 @@ body {
     }
 
     #TopBanner h1 {
-        padding-left: 15px;
-        margin-left: 15px;
         font-size: 10vw;
         font-weight: bolder;
     }
