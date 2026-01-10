@@ -1,3 +1,22 @@
 <footer class="site-footer">
-  <p>&copy; {{ "now" | date: "%Y" }} Sample Local Government Authority</p>
+<div class="footer-column-left">
+  <div class="footer-logo">
+    <a href="https://www.derbyshire.gov.uk"><img class="svg-footer-logo" src="{{ site.baseurl }}/Assets/img/DCC-Footer-Logo.svg" alt="Derbyshire County Council Logo"></a>
+  </div>
+  <div class="footer-links">
+    <ul>
+      <li><a href="{{ site.baseurl }}/our-website.html">Our Website</a></li>
+      <li><a href="{{ site.baseurl }}/privacy-statement.html">Privacy Statement</a></li>
+      <li><a href="{{ site.baseurl }}/enforcement-policy.html">Enforcement Policy</a></li>
+      <li><a href="{{ site.baseurl }}/accessibility.html">Accessibility</a></li>
+      <li><a href="{{ site.baseurl }}/disclaimer.html">Disclaimer</a></li>
+      <li><a href="{{ site.baseurl }}/cookies.html">Cookies</a></li>
+    </ul>
+  </div>
+  <div class="copyright-statement">
+      <p>&copy; {{ "now" | date: "%Y" }} Derbyshire County Council. All rights reserved.</p>
+  </div>
+</div>
+<div class="footer-column-right">
+</div>
 </footer>
