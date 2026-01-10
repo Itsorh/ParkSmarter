@@ -15,6 +15,11 @@ section {
     padding: 20px;
 }
 
+.break {
+    flex-basis: 100%;
+    height: 10px;
+}
+
 /* ----------------------------- */
 /* Top Banner (ID version)       */
 /* ----------------------------- */
@@ -44,6 +49,24 @@ section {
     font-style: normal;
 }
 
+.page-section {
+    padding: 20px;
+    background: white;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+}
+
+.page-section p {
+    font-size: large;
+    margin-bottom: 1.2rem;
+}
+
+.page-section h2 {
+    font-size: xx-large;
+    margin-bottom: 2rem;
+}
+
+
 
 .menu-toggle {
     display: none;
@@ -53,7 +76,6 @@ section {
     color: white;
     cursor: pointer;
 }
-
 
 /* ----------------------------- */
 /* .topbanner class version      */
@@ -203,6 +225,52 @@ section {
 /* ----------------------------- */
 /* Footer                    */
 /* ----------------------------- */
+
+.page-column {
+    max-width: 1024px;
+    margin: 0 auto;
+}
+
+.top-section {
+    padding: 20px;
+    background: white;
+    margin-bottom: 1rem;
+}
+
+.cta-click {
+  display: inline-block;
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.25;
+
+  padding: 0.625rem 1.25rem;
+
+  background-color: #547792;
+  color: #ffffff;
+  text-decoration: none;
+
+  border: 0;
+  border-radius: 0;
+
+  cursor: pointer;
+
+  box-shadow: 0 2px 0 #14202d;
+}
+
+.cta-click:hover {
+  background-color: #1a2a3a;
+}
+
+.cta-click:active {
+  background-color: #162433;
+  box-shadow: inset 0 2px 0 #14202d;
+}
+
+.cta-click:focus-visible {
+  outline: 3px solid #ffdd00;
+  outline-offset: 0;
+}
 
 .site-footer {
     display:flex;
