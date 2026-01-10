@@ -1,13 +1,17 @@
 <header id="TopBanner" class="topbanner">
     <a href="{{ site.baseurl }}/index.html" class="left-link">
-    <div class="left">
-        <img src="{{ site.baseurl }}/Assets/img/logo.png" alt="Parking sign with arrow pointing right">
-        <h1>Park Smarter</h1>
-    </div>
-</a>
-        </header>
+      <div class="left">
+       <h1 class="site-title">Park Smarter</h1>  
+       <img src="{{ site.baseurl }}/Assets/img/logo.png" alt="Parking sign with arrow pointing right">
+      </div>
+    </a>
+</header>
+
 <nav id="topnav">
-  <button class="menu-toggle">&#9776;</button>  <!-- Hamburger icon-->
+  <button class="menu-toggle" aria-label="Toggle navigation menu">
+    &#9776;
+  </button>
+  
   <ul>
     <li><a href="{{ site.baseurl }}/pay-pcn.html">Pay PCN</a></li>
     <li><a href="{{ site.baseurl }}/dispute-pcn.html">Dispute PCN</a></li>
@@ -19,10 +23,3 @@
     <li><a href="{{ site.baseurl }}/our-partners.html">Our partners</a></li>
   </ul>
 </nav>
-
-
-<script>
-document.querySelector('.menu-toggle').addEventListener('click', function() {
-    document.querySelector('#topnav ul').classList.toggle('show');
-});
-</script>

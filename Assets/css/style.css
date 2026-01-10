@@ -1,12 +1,12 @@
 /* Global reset */
-* { margin: 0;
+* {
+    margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
 body {
-    font-family: 'Roboto', sans-serif;
-    line-height: 1.6;
+    font-family: 'Inter', sans-serif;
     background-color: #f4f4f4;
     color: #333;
 }
@@ -17,7 +17,7 @@ body {
 
 #TopBanner {
     display: flex;
-    height:160px;
+    justify-content: flex-end;
     align-items: center;
     padding: 20px;
     gap: 20px;
@@ -28,47 +28,34 @@ body {
 #TopBanner img {
     width: 120px;
     height: auto;
+    display: block;
 }
 
 #TopBanner h1 {
-    font-family: 'BabasNeue', sans-serif;
-    font-size: 40px;
+    font-family: 'Inter', sans-serif;
     color: white;
+    font-size:xx-large;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
 }
 
-/* Mobile layout for #TopBanner */
-@media (max-width: 424px) {
-    #TopBanner {
-        flex-direction: column;
-        text-align: center;
-        justify-content: center;
-        height: 160px;
-    }
 
-    #TopBanner img {
-        width: 80px;
-    }
-
-    #TopBanner h1 {
-        font-size: 10vw;
-        font-weight: bolder;
-    }
-
-    #TopBanner p {
-        font-size: x-large;
-        font-weight: bold;
-    }
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
 }
+
 
 /* ----------------------------- */
 /* .topbanner class version      */
 /* ----------------------------- */
 
 .topbanner {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    padding: 0.75rem 1rem;
     background: #547792;
     border-bottom: 1px solid #547792;
 }
@@ -76,13 +63,7 @@ body {
 .topbanner .left {
     display: flex;
     align-items: center;
-    gap: 1rem;
-}
-
-.topbanner img {
-    height: 48px;
-    width: auto;
-    display: block;
+    gap: 0.5rem;
 }
 
 .left-link {
@@ -91,8 +72,14 @@ body {
     display: inline-block; /* or block if you want full-width */
 }
 
-.menu-toggle {
-    display:none;
+
+.topbanner .tagline,
+.topbanner .tagline p{
+    margin: 0;
+    color: #fff;
+    font-size: x-large;
+    font-weight: bolder;
+    text-align: right;
 }
 
 /* ----------------------------- */
@@ -110,12 +97,10 @@ body {
     margin: 0;
     padding: 0;
     display: flex;
-    gap: 0.85rem;
+    gap: 1.5rem;
     flex-wrap: wrap;
-    align-items: center;
     justify-content: center;
 }
-
 
 /* Base nav item styling */
 #topnav ul li {
@@ -130,32 +115,82 @@ body {
 
 /* Make the link fill the li */
 #topnav ul li a {
-    display: block;
     color: white;
-    font-family: 'BabasNeue', sans-serif;
+    font-family: 'Inter', sans-serif;
     text-decoration: none;
     font-weight: bold;
     transition: color 0.25s ease;
 }
 
+/* Hover effect: white interior + black text + glow */
+#topnav ul li:hover {
+    background-color: #415e73;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-decoration: underline;
+}
 
+#topnav ul li:hover a {
+    text-decoration: underline;
+    color: white;
+}
 
 #topnav ul li a {
     color: white;
     text-decoration: none;
     font-weight: bold;
 }
-#topnav ul li:hover {
-    background-color: #415e73;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
 
-#topnav ul li a:hover {
-    text-decoration:underline;
-}
-/* Remove separator between banner + nav */
-.topbanner,
-#topnav {
-    box-shadow: none;
-    border-bottom: none;
+/* Mobile layout for .topbanner */
+@media (max-width: 1200px) {
+    .topbanner {
+        flex-wrap: wrap;
+        align-items: center;
+    }
+
+    .topbanner .left {
+        width: 100%;
+    }
+
+    .topbanner .tagline {
+        width: 100%;
+        margin-top: 0.4rem;
+        font-size: x-large !important;
+    }
+
+    #topnav {
+        padding: 0.5rem 0.75rem;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+    }
+
+    .menu-toggle {
+        display: block;
+        margin-left:auto
+    }
+
+    #topnav ul {
+        display:none;
+        flex-direction: column;
+        width: 100%;
+        gap: 0;
+        margin-top: 0.5rem;
+        align-items: flex-end;
+    }
+
+    #topnav ul li {
+        text-align: right;
+        padding: 0.75rem 1rem;
+    }
+
+    #topnav ul.show {
+        display: flex;
+    }
+ }   
+
+
+@media (max-width: 367px) {
+    #TopBanner h1 {
+        justify-content: center;
+    }
 }
