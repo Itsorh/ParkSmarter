@@ -66,6 +66,10 @@ section {
     margin-bottom: 2rem;
 }
 
+.page-section h3 {
+    font-size: x-large;
+    margin-bottom: 1rem;
+}
 
 
 .menu-toggle {
@@ -229,6 +233,27 @@ section {
 .page-column {
     max-width: 1024px;
     margin: 0 auto;
+}
+
+
+.pcn-wrap {
+  display: inline-block;            /* shrink-to-fit container */
+  max-width: 100%;                  /* don’t overflow viewport */
+}
+
+
+/* Make the paragraph define the measure (width) */
+.pcn-measure {
+  display: inline-block;            /* stops it from stretching full row */
+  margin: 0 0 .5rem 0;
+  /* Optional: set a comfortable max line length to control wrapping */
+  max-width: 60ch;
+}
+
+
+/* Make the form take the wrapper’s width (which matches the <p>) */
+.pcn-field {
+  width: 100%;
 }
 
 .top-section {
