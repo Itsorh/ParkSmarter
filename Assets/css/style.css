@@ -11,8 +11,27 @@ body {
     color: #333;
 }
 
-section {
+.page-container {
+    padding-left: 10px;
+    padding-right: 10px;
+    display:flex;
+    gap: 20px;
+    align-items: flex-start;
+}    
+
+.section {
     padding: 20px;
+}
+
+.main-column {
+    flex: 1;
+    min-width: 0;
+}
+
+.main-column > * {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
 }
 
 .break {
@@ -26,7 +45,7 @@ section {
 
 #TopBanner {
     display: flex;
-    justify-content: flex-end;
+    justify-content: flex-start;
     align-items: center;
     padding: 16px;
     gap: 20px;
@@ -56,19 +75,66 @@ section {
     margin-top: 1rem;
 }
 
+.sidebar-section {
+    padding: 20px;
+    background: white;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+    border: #547792;
+    border-width: 2px;
+    width: 350px;
+}
+
 .page-section p {
     font-size: large;
-    margin-bottom: 1.2rem;
+    margin-bottom: 16px;
+    margin-top: 16px;
 }
 
 .page-section h2 {
     font-size: xx-large;
-    margin-bottom: 2rem;
+    margin-bottom: 10px;
 }
 
 .page-section h3 {
     font-size: x-large;
-    margin-bottom: 1rem;
+    margin-bottom: 15px;
+    margin-top: 30px;
+}
+
+.bodylist {
+    padding-left: 30px;
+    margin-bottom: 16px;
+}
+
+.page-section li {
+    margin-bottom: 8px;
+    font-size: large;
+}
+
+.pcn-field textarea {
+    width: 100%;
+    height: 48px;
+    line-height: 46px;
+    padding-top: 0;
+    padding-bottom: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    resize: none;
+    box-sizing:border-box;
+    border: 2px solid #000000;
+    outline: none;
+    font-size: large;
+    font-weight: bold;
+    font-family: 'Inter', sans-serif;
+    padding-left: 5px;
+    margin-bottom: 16px;
+    border: 2px solid #000000;
+
+}
+
+.pcn-field textarea:focus {
+    box-shadow: 0 0 0 2px #2175b7;
 }
 
 
@@ -118,28 +184,33 @@ section {
 
 #topnav {
     background: #547792;
-    padding: 0.5rem 1rem;
     margin-top: 0;
 }
 
 #topnav ul {
     list-style: none;
     margin: 0;
-    padding: 0;
+    padding: 0 0 0 18px;
     display: flex;
     gap: 1.5rem;
     flex-wrap: wrap;
-    justify-content: center;
 }
+
 
 /* Base nav item styling */
 #topnav ul li {
-    padding: 0.25rem 0.75rem;
+    padding: 0;
     border-radius: 6px;
+
+    /* PREVENT WOBBLE */
+    border: 2px solid transparent;
+    box-sizing: border-box;
+
     transition: 
         background-color 0.25s ease,
         color 0.25s ease,
         box-shadow 0.25s ease,
+        border-color 0.25s ease,
         transform 0.25s ease;
 }
 
@@ -149,20 +220,28 @@ section {
     font-family: 'Inter', sans-serif;
     text-decoration: none;
     font-weight: bold;
-    transition: color 0.25s ease;
+    transition: color 0.25s ease, text-decoration-color 0.25s ease;
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding: 1rem 0.75rem;
+    box-sizing: border-box;
 }
 
-/* Hover effect: white interior + black text + glow */
+/* Hover effect: white border + background + no wobble */
 #topnav ul li:hover {
     background-color: #415e73;
+    border-color: #ffffff; /* only color changes */
+    color: #000000;
+    text-underline-offset: 3px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    text-decoration: underline;
 }
 
+/* Link hover styling */
 #topnav ul li:hover a {
-    text-decoration: underline;
     color: white;
 }
+
 
 #topnav ul li a {
     color: white;
@@ -171,7 +250,7 @@ section {
 }
 
 /* Mobile layout for .topbanner */
-@media (max-width: 1200px) {
+@media (max-width: 1500px) {
     .topbanner {
         flex-wrap: wrap;
         align-items: center;
@@ -196,7 +275,7 @@ section {
 
     .menu-toggle {
         display: block;
-        margin-left:auto;
+        margin-left: auto;
         align-items: center
     }
 
@@ -231,10 +310,13 @@ section {
 /* ----------------------------- */
 
 .page-column {
-    max-width: 1024px;
-    margin: 0 auto;
+    flex: 1;
+    min-width: 0;
 }
 
+.sidebar {
+    flex-shrink: 0;
+}
 
 .pcn-wrap {
   display: inline-block;            /* shrink-to-fit container */
@@ -356,4 +438,14 @@ section {
     color: white;
     font-size: small;
     padding-bottom: 16px;   
+}
+
+@media (max-width: 1500px) {
+    .page-container {
+        flex-direction: column;
+    }
+    .sidebar-section {
+        width: 100% !important;
+        flex-shrink: 1 !important;
+    }
 }

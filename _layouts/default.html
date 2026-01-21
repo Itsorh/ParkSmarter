@@ -21,11 +21,19 @@
 </head>
 
 <body>
-  <div id="wrapper">
-    {% include header.html %}
-    {{ content }}
-  </div>
 
-  {% include footer.html %}
+<div id="wrapper">
+  {% include header.html %}
+
+  <div class="page-container">   
+    <div class="main-column">     
+      {{ content }}
+    </div>
+
+    {% include sidebar.html %}    
+  </div>                          
+
+</div>
+    {% include footer.html %}
 </body>
 </html>
