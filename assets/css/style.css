@@ -174,7 +174,6 @@ body {
 .page-section p {
     font-size: large;
     margin-bottom: 16px;
-    margin-top: 16px;
 }
 
 .page-section h2 {
@@ -184,6 +183,8 @@ body {
 
 .page-section h3 {
     font-size: x-large;
+    margin-top:1.875rem;
+    margin-bottom:0.875rem;
 }
 
 .bodylist {
@@ -194,7 +195,15 @@ body {
 .page-section li {
     margin-bottom: 8px;
     font-size: large;
+    padding-top: 5px;
 }
+
+.relateddocuments li {
+    list-style: none;
+    padding-left: 0;
+    padding-top: 5px;
+}
+
 
 .pcn-field textarea {
     width: 100%;
