@@ -4,11 +4,21 @@
     padding: 0;
     box-sizing: border-box;
 }
+html {
+  scrollbar-gutter: stable;
+}
+
+html, body {
+    height: 100%;
+}
 
 body {
     font-family: 'Inter', sans-serif;
     background-color: #f4f4f4;
     color: #333;
+    min-height:100svh;
+    display:flex;
+    flex-direction: column;
 }
 
 .page-container {
@@ -17,6 +27,7 @@ body {
     display:flex;
     gap: 20px;
     align-items: flex-start;
+    flex: 1 0 auto;
 }    
 
 .section {
@@ -39,10 +50,6 @@ body {
     height: 10px;
 }
 
-.relateddocuments {
-    text-decoration: none;
-}
-
 /* ----------------------------- */
 /* Top Banner (ID version)       */
 /* ----------------------------- */
@@ -58,7 +65,7 @@ body {
 }
 
 #TopBanner img {
-    width: 750px;
+    width: 450px;
     height: auto;
     display: block;
 }
@@ -177,8 +184,6 @@ body {
 
 .page-section h3 {
     font-size: x-large;
-    margin-bottom: 15px;
-    margin-top: 30px;
 }
 
 .bodylist {
@@ -462,7 +467,7 @@ body {
     display:flex;
     align-items: flex-start;
     background: #213448;
-    margin-top: 1rem;
+    margin-top: auto;
     padding: 2rem 16px 0 16px
 }
 

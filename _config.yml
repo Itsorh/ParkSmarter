@@ -1,1 +1,11 @@
+
+title: ParkSmarter
+description: ""
 baseurl: "/ParkSmarter"
+url: "https://itsorh.github.io"
+
+include:
+  - favicon.ico
+
+plugins:
+  - jekyll-feed
