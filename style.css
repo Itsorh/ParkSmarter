@@ -1,0 +1,526 @@
+/* Global reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.page-container {
+    padding-left: 10px;
+    padding-right: 10px;
+    display:flex;
+    gap: 20px;
+    align-items: flex-start;
+}    
+
+.section {
+    padding: 20px;
+}
+
+.main-column {
+    flex: 1;
+    min-width: 0;
+}
+
+.main-column > * {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+.break {
+    flex-basis: 100%;
+    height: 10px;
+}
+
+/* ----------------------------- */
+/* Top Banner (ID version)       */
+/* ----------------------------- */
+
+#TopBanner {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 16px;
+    gap: 20px;
+    background-color: #213448;
+    flex-wrap: wrap;
+}
+
+#TopBanner img {
+    width: 750px;
+    height: auto;
+    display: block;
+}
+
+#TopBanner h1 {
+    font-family: 'Inter', sans-serif;
+    color: white;
+    font-size:xx-large;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.page-section {
+    padding: 20px;
+    background: white;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+}
+
+/* =========================================================
+   FAQ accordion – GOV.UK–style (details / summary)
+   Matches classes: .faq, .faq-item, .faq-question, .faq-answer  
+   ========================================================= */
+
+/* Accordion container */
+.faq {
+  border-top: 1px solid #b1b4b6;
+}
+
+/* Individual accordion item */
+.faq-item {
+  border-bottom: 1px solid #b1b4b6;
+  margin: 0;
+}
+
+/* Question (summary) */
+.faq-question {
+  position: relative;
+  display: block;
+  width: 100%;
+  padding: 1rem 3rem 1rem 0;
+  font-weight: 700;
+  cursor: pointer;
+  list-style: none;
+}
+
+/* Remove default marker */
+.faq-question::-webkit-details-marker {
+  display: none;
+}
+.faq-question::marker {
+  display: none;
+}
+
+/* Chevron indicator */
+.faq-question::after {
+  content: "▾";
+  position: absolute;
+  right: 0;
+  top: 1rem;
+  font-size: 1.25rem;
+  transition: transform 0.2s ease;
+}
+
+/* Rotate chevron when open */
+.faq-item[open] .faq-question::after {
+  transform: rotate(180deg);
+}
+
+/* Focus state (GOV.UK style) */
+.faq-question:focus {
+  background-color: #ffdd00;
+  color: #0b0c0c;
+  outline: none;
+  box-shadow: inset 0 -4px 0 #0b0c0c;
+}
+
+/* Answer panel */
+.faq-answer {
+  padding: 0 0 1rem 0;
+}
+
+/* Spacing inside answers */
+.faq-answer p {
+  margin-top: 0.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.faq-answer ul {
+  margin-top: 0.5rem;
+  margin-bottom: 0.75rem;
+  padding-left: 1.25rem;
+}
+
+.sidebar-section {
+    padding: 20px;
+    background: white;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+    border: #547792;
+    border-width: 2px;
+    width: 450px;
+}
+
+.page-section p {
+    font-size: large;
+    margin-bottom: 16px;
+    margin-top: 16px;
+}
+
+.page-section h2 {
+    font-size: xx-large;
+    margin-bottom: 10px;
+}
+
+.page-section h3 {
+    font-size: x-large;
+    margin-bottom: 15px;
+    margin-top: 30px;
+}
+
+.bodylist {
+    padding-left: 30px;
+    margin-bottom: 16px;
+}
+
+.page-section li {
+    margin-bottom: 8px;
+    font-size: large;
+}
+
+.pcn-field textarea {
+    width: 100%;
+    height: 48px;
+    line-height: 46px;
+    padding-top: 0;
+    padding-bottom: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    resize: none;
+    box-sizing:border-box;
+    border: 2px solid #000000;
+    outline: none;
+    font-size: large;
+    font-weight: bold;
+    font-family: 'Inter', sans-serif;
+    padding-left: 5px;
+    margin-bottom: 16px;
+    border: 2px solid #000000;
+
+}
+
+.pcn-field textarea:focus {
+    box-shadow: 0 0 0 2px #2175b7;
+}
+
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+}
+
+/* ----------------------------- */
+/* .topbanner class version      */
+/* ----------------------------- */
+
+.topbanner {
+    background: #547792;
+    border-bottom: 1px solid #547792;
+}
+
+.topbanner .left {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.left-link {
+    text-decoration: none;
+    color: inherit;
+    display: inline-block; /* or block if you want full-width */
+}
+
+
+.topbanner .tagline,
+.topbanner .tagline p{
+    margin: 0;
+    color: #fff;
+    font-size: x-large;
+    font-weight: bolder;
+    text-align: right;
+}
+
+/* ----------------------------- */
+/* Navigation                    */
+/* ----------------------------- */
+
+#topnav {
+    background: #547792;
+    margin-top: 0;
+}
+
+#topnav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0 0 0 18px;
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+
+/* Base nav item styling */
+#topnav ul li {
+    padding: 0;
+    border-radius: 6px;
+
+    /* PREVENT WOBBLE */
+    border: 2px solid transparent;
+    box-sizing: border-box;
+
+    transition: 
+        background-color 0.25s ease,
+        color 0.25s ease,
+        box-shadow 0.25s ease,
+        border-color 0.25s ease,
+        transform 0.25s ease;
+}
+
+/* Make the link fill the li */
+#topnav ul li a {
+    color: white;
+    font-family: 'Inter', sans-serif;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.25s ease, text-decoration-color 0.25s ease;
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding: 1rem 0.75rem;
+    box-sizing: border-box;
+}
+
+/* Hover effect: white border + background + no wobble */
+#topnav ul li:hover {
+    background-color: #415e73;
+    border-color: #ffffff; /* only color changes */
+    color: #000000;
+    text-underline-offset: 3px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Link hover styling */
+#topnav ul li:hover a {
+    color: white;
+}
+
+
+#topnav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Mobile layout for .topbanner */
+@media (max-width: 1500px) {
+    .topbanner {
+        flex-wrap: wrap;
+        align-items: center;
+    }
+
+    .topbanner .left {
+        width: 100%;
+    }
+
+    .topbanner .tagline {
+        width: 100%;
+        margin-top: 0.4rem;
+        font-size: x-large !important;
+    }
+
+    #topnav {
+        padding: 8px 16px 8px 16px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+    }
+
+    .menu-toggle {
+        display: block;
+        margin-left: auto;
+        align-items: center
+    }
+
+    #topnav ul {
+        display:none;
+        flex-direction: column;
+        width: 100%;
+        gap: 0;
+        margin-top: 0.5rem;
+        align-items: flex-end;
+    }
+
+    #topnav ul li {
+        text-align: right;
+        padding: 0.75rem 0rem 0.75rem 0.75rem;
+    }
+
+    #topnav ul.show {
+        display: flex;
+    }
+ }   
+
+
+@media (max-width: 367px) {
+    #TopBanner h1 {
+        justify-content: center;
+    }
+}
+
+/* ----------------------------- */
+/* Footer                    */
+/* ----------------------------- */
+
+.page-column {
+    flex: 1;
+    min-width: 0;
+}
+
+.sidebar {
+    flex-shrink: 0;
+}
+
+.pcn-wrap {
+  display: inline-block;            /* shrink-to-fit container */
+  max-width: 100%;                  /* don’t overflow viewport */
+}
+
+
+/* Make the paragraph define the measure (width) */
+.pcn-measure {
+  display: inline-block;            /* stops it from stretching full row */
+  margin: 0 0 .5rem 0;
+  /* Optional: set a comfortable max line length to control wrapping */
+  max-width: 60ch;
+}
+
+
+/* Make the form take the wrapper’s width (which matches the <p>) */
+.pcn-field {
+  width: 100%;
+}
+
+.top-section {
+    padding: 20px;
+    background: white;
+    margin-bottom: 1rem;
+}
+
+.cta-click {
+  display: inline-block;
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.25;
+
+  padding: 0.625rem 1.25rem;
+
+  background-color: #547792;
+  color: #ffffff;
+  text-decoration: none;
+
+  border: 0;
+  border-radius: 0;
+
+  cursor: pointer;
+
+  box-shadow: 0 2px 0 #14202d;
+}
+
+.cta-click:hover {
+  background-color: #1a2a3a;
+}
+
+.cta-click:active {
+  background-color: #162433;
+  box-shadow: inset 0 2px 0 #14202d;
+}
+
+.cta-click:focus-visible {
+  outline: 3px solid #ffdd00;
+  outline-offset: 0;
+}
+
+.site-footer {
+    display:flex;
+    align-items: flex-start;
+    background: #213448;
+    margin-top: 1rem;
+    padding: 2rem 16px 0 16px
+}
+
+.footer-column-left {
+    padding-left: 10px;
+    padding-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: flex-start;
+}
+
+.footer-column-left img {
+    padding-top: 20px;
+    width: 150px;
+    height: auto;
+    margin: 0 auto;
+}
+
+.footer-links {
+    padding-bottom: 16px;
+}
+
+.footer-links ul {
+    padding-top: 20px;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.footer-links p {
+    color: white;
+    font-weight: bold;
+    padding-top: 10px;
+    justify-content:end;
+}   
+
+.footer-links ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.25s ease;
+}
+
+.footer-links ul li a:hover {
+    text-decoration: underline;
+    color: #ddd;
+}
+
+.copyright-statement {
+    color: white;
+    font-size: small;
+    padding-bottom: 16px;   
+}
+
+@media (max-width: 1500px) {
+    .page-container {
+        flex-direction: column;
+    }
+    .sidebar-section {
+        width: 100% !important;
+        flex-shrink: 1 !important;
+    }
+}
