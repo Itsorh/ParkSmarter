@@ -75,26 +75,79 @@ body {
     margin-top: 1rem;
 }
 
-/* ----------------------------- */
-/*         .faq-section          */
-/* ----------------------------- */
+/* =========================================================
+   FAQ accordion – GOV.UK–style (details / summary)
+   Matches classes: .faq, .faq-item, .faq-question, .faq-answer  
+   ========================================================= */
 
-.faq details {
-border-bottom: 1px solid #ccc;
-  padding: 1rem 0;
+/* Accordion container */
+.faq {
+  border-top: 1px solid #b1b4b6;
 }
 
-.faq summary {
-  font-weight: 600;
+/* Individual accordion item */
+.faq-item {
+  border-bottom: 1px solid #b1b4b6;
+  margin: 0;
+}
+
+/* Question (summary) */
+.faq-question {
+  position: relative;
+  display: block;
+  width: 100%;
+  padding: 1rem 3rem 1rem 0;
+  font-weight: 700;
   cursor: pointer;
+  list-style: none;
 }
 
-.faq summary::marker {
-  font-size: 1.2em;
+/* Remove default marker */
+.faq-question::-webkit-details-marker {
+  display: none;
+}
+.faq-question::marker {
+  display: none;
 }
 
-.faq details[open] summary {
-  margin-bottom: 0.5rem;
+/* Chevron indicator */
+.faq-question::after {
+  content: "▾";
+  position: absolute;
+  right: 0;
+  top: 1rem;
+  font-size: 1.25rem;
+  transition: transform 0.2s ease;
+}
+
+/* Rotate chevron when open */
+.faq-item[open] .faq-question::after {
+  transform: rotate(180deg);
+}
+
+/* Focus state (GOV.UK style) */
+.faq-question:focus {
+  background-color: #ffdd00;
+  color: #0b0c0c;
+  outline: none;
+  box-shadow: inset 0 -4px 0 #0b0c0c;
+}
+
+/* Answer panel */
+.faq-answer {
+  padding: 0 0 1rem 0;
+}
+
+/* Spacing inside answers */
+.faq-answer p {
+  margin-top: 0.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.faq-answer ul {
+  margin-top: 0.5rem;
+  margin-bottom: 0.75rem;
+  padding-left: 1.25rem;
 }
 
 .sidebar-section {
