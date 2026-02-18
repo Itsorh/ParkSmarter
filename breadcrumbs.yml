@@ -1,0 +1,82 @@
+home:
+  title: Home
+  url: /
+
+# Parking enforcement
+what:
+  title: What we do
+  url: /what-we-do.html
+  parent: home
+
+policy:
+  title: Enforcement policy
+  url: /enforcement-policy.html
+  parent: what
+
+kerbs:
+  title: Dropped kerbs
+  url: /dropped-kerbs.html
+  parent: what
+
+# PCNs
+pcn:
+  title: Penalty Charge Notices
+  url: /pay-pcn.html
+  parent: home
+
+pay:
+  title: Pay a PCN
+  url: /pay-pcn.html
+  parent: pcn
+
+dispute:
+  title: Dispute a PCN
+  url: /dispute-pcn.html
+  parent: pcn
+
+faq:
+  title: FAQs
+  url: /faq.html
+  parent: pcn
+
+# About
+officers:
+  title: Our officers
+  url: /our-officers.html
+  parent: home
+
+partners:
+  title: Our partners
+  url: /our-partners.html
+  parent: home
+
+contact:
+  title: Contact us
+  url: /contact-us.html
+  parent: home
+
+# Website / legal
+website:
+  title: Our website
+  url: /our-website.html
+  parent: home
+
+accessibility:
+  title: Accessibility
+  url: /accessibility.html
+  parent: website
+
+privacy:
+  title: Privacy statement
+  url: /privacy-statement.html
+  parent: website
+
+cookies:
+  title: Cookies
+  url: /cookies.html
+  parent: website
+
+disclaimer:
+  title: Disclaimer
+  url: /disclaimer.html
+  parent: website
