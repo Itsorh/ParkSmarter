@@ -1,16 +1,21 @@
 <header id="TopBanner" class="topbanner">
+  <div class="banner-inner">
+    
     <a href="{{ site.baseurl }}/index.html" class="left-link">
-      <div class="left">
-        <img src="{{ site.baseurl }}/assets/img/logo.svg" title="Park Smarter" alt="Parking sign with arrow pointing right">
-      </div>
+      <img src="{{ site.baseurl }}/assets/img/logo.svg"
+           title="Park Smarter"
+           alt="Parking sign with arrow pointing right"
+           rel="external">
     </a>
+
+    <button class="menu-toggle" aria-label="Toggle navigation menu">
+      &#9776;
+    </button>
+
+  </div>
 </header>
 
 <nav id="topnav">
-  <button class="menu-toggle" aria-label="Toggle navigation menu">
-    &#9776;
-  </button>
-  
   <ul>
     <li><a href="{{ site.baseurl }}/pay-pcn.html">Pay PCN</a></li>
     <li><a href="{{ site.baseurl }}/dispute-pcn.html">Dispute PCN</a></li>

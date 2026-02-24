@@ -15,13 +15,16 @@ html, body {
 body {
     font-family: 'Inter', sans-serif;
     background-color: #f4f4f4;
-    color: #333;
+    color: #14202d;
     min-height:100svh;
     display:flex;
     flex-direction: column;
+    font-weight: 500;
 }
 
 .page-container {
+    max-width: 1050px;
+    margin: 0 auto;
     padding-left: 10px;
     padding-right: 10px;
     display:flex;
@@ -55,17 +58,21 @@ body {
 /* ----------------------------- */
 
 #TopBanner {
+    background-color: #213448;
+    padding: 16px 0;   /* vertical padding only */
+}
+
+.banner-inner {
+    max-width: 1050px;
+    margin: 0 auto;
+    padding: 0 10px; /* match .page-container padding */
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    padding: 16px;
-    gap: 20px;
-    background-color: #213448;
-    flex-wrap: wrap;
 }
 
 #TopBanner img {
-    width: 450px;
+    width: 300px;
     height: auto;
     display: block;
 }
@@ -107,7 +114,7 @@ body {
   position: relative;
   display: block;
   width: 100%;
-  padding: 1rem 3rem 1rem 0;
+  padding: 1rem 3rem 1rem 0.4rem;
   font-weight: 700;
   cursor: pointer;
   list-style: none;
@@ -119,6 +126,10 @@ body {
 }
 .faq-question::marker {
   display: none;
+}
+
+.faq-item[open] .faq-question {
+  color: white;
 }
 
 /* Chevron indicator */
@@ -134,14 +145,20 @@ body {
 /* Rotate chevron when open */
 .faq-item[open] .faq-question::after {
   transform: rotate(180deg);
+  color: white;
 }
 
 /* Focus state (GOV.UK style) */
-.faq-question:focus {
+.faq-question:focus-visible {
   background-color: #547792;
   color: #0b0c0c;
   outline: none;
   box-shadow: inset 0 -4px 0 #0b0c0c;
+}
+
+.faq-item[open] .faq-question {
+  background-color: #547792;
+  color: white;
 }
 
 /* Answer panel */
@@ -149,31 +166,54 @@ body {
   padding: 0 0 1rem 0;
 }
 
+
 /* Spacing inside answers */
 .faq-answer p {
   margin-top: 0.5rem;
   margin-bottom: 0.75rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 1rem;
 }
 
 .faq-answer ul {
   margin-top: 0.5rem;
   margin-bottom: 0.75rem;
-  padding-left: 1.25rem;
-}
-
-.sidebar-section {
-    padding: 20px;
-    background: white;
-    margin-bottom: 1rem;
-    margin-top: 1rem;
-    border: #547792;
-    border-width: 2px;
-    width: 400px;
+  padding-left: 2rem;
 }
 
 .page-section p {
     font-size: large;
     margin-bottom: 16px;
+}
+
+.page-section p a:visited {
+    color: #547792;
+}
+
+.page-section p a {
+    color: #547792;
+    font-weight: 600;
+}
+
+.relateddocumentsitem a {
+    color: #14202d;
+    font-weight: 600;
+}
+
+.relateddocumentsitem a:visited {
+    color: #14202d;
+}
+
+.usefulinfo a {
+    color: #14202d;
+    font-weight: 600;
+}
+
+.usefulinfo a:visited {
+    color: #14202d;
+    font-weight: 600;
+
 }
 
 .page-section h2 {
@@ -204,6 +244,18 @@ body {
     padding-top: 5px;
 }
 
+.relateddocumentsitem a {
+    display: block;
+    padding: 1rem;
+    border: 1px solid #b1b4b6;
+    border-left: 6px solid #547792;
+    text-decoration: none;
+    background: #f8f8f8;
+}
+
+.relateddocumentsitem a:hover {
+    background: #e9f1f7;
+}
 
 .pcn-field textarea {
     width: 100%;
@@ -233,6 +285,7 @@ body {
 
 .menu-toggle {
     display: none;
+    margin-left: auto;
     background: none;
     border: none;
     font-size: 2rem;
@@ -276,16 +329,18 @@ body {
 /* ----------------------------- */
 
 #topnav {
+    margin: 0 auto;
     background: #547792;
     margin-top: 0;
 }
 
 #topnav ul {
+    justify-content:center;
     list-style: none;
     margin: 0;
-    padding: 0 0 0 18px;
+    padding: 0 0 0 10px;
     display: flex;
-    gap: 1.5rem;
+    gap: 0.8rem;
     flex-wrap: wrap;
 }
 
@@ -317,7 +372,7 @@ body {
     display: block;
     width: 100%;
     height: 100%;
-    padding: 1rem 0.75rem;
+    padding: 0.6rem 0.75rem;
     box-sizing: border-box;
 }
 
@@ -343,7 +398,7 @@ body {
 }
 
 /* Mobile layout for .topbanner */
-@media (max-width: 1500px) {
+@media (max-width: 1050px) {
     .topbanner {
         flex-wrap: wrap;
         align-items: center;
@@ -360,7 +415,7 @@ body {
     }
 
     #topnav {
-        padding: 8px 16px 8px 16px;
+        padding: 0px 16px 6px 16px;
         display: flex;
         flex-direction: column;
         align-items: flex-end;
@@ -369,7 +424,7 @@ body {
     .menu-toggle {
         display: block;
         margin-left: auto;
-        align-items: center
+        align-items: center;
     }
 
     #topnav ul {
@@ -383,7 +438,6 @@ body {
 
     #topnav ul li {
         text-align: right;
-        padding: 0.75rem 0rem 0.75rem 0.75rem;
     }
 
     #topnav ul.show {
@@ -405,10 +459,6 @@ body {
 .page-column {
     flex: 1;
     min-width: 0;
-}
-
-.sidebar {
-    flex-shrink: 0;
 }
 
 .pcn-wrap {
@@ -443,18 +493,13 @@ body {
   font-size: 1rem;
   font-weight: 700;
   line-height: 1.25;
-
   padding: 0.625rem 1.25rem;
-
   background-color: #547792;
   color: #ffffff;
   text-decoration: none;
-
   border: 0;
   border-radius: 0;
-
   cursor: pointer;
-
   box-shadow: 0 2px 0 #14202d;
 }
 
@@ -468,8 +513,15 @@ body {
 }
 
 .cta-click:focus-visible {
-  outline: 3px solid #ffdd00;
+  outline: 3px solid #14202d;
   outline-offset: 0;
+}
+
+.cta-click,
+.cta-click:visited,
+.cta-click:hover,
+.cta-click:active {
+  color: #ffffff;
 }
 
 .site-footer {
@@ -478,6 +530,11 @@ body {
     background: #213448;
     margin-top: auto;
     padding: 2rem 16px 0 16px
+}
+
+.site-footer a:focus {
+  outline: 3px solid #ffffff;
+  outline-offset: 2px;
 }
 
 .footer-column-left {
@@ -533,12 +590,8 @@ body {
     padding-bottom: 16px;   
 }
 
-@media (max-width: 1500px) {
+@media (max-width: 879px) {
     .page-container {
         flex-direction: column;
-    }
-    .sidebar-section {
-        width: 100% !important;
-        flex-shrink: 1 !important;
     }
 }
