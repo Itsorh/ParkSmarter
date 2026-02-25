@@ -10,7 +10,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
   <!-- Fonts -->
- <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
  
   <!-- Meta description -->
   <meta name="Description"
@@ -18,10 +18,17 @@
 
   <!-- Use baseurl so project pages work -->
   <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/style.css">
+
+  {% include analytics.html %}
+
   <script src="{{ site.baseurl }}/assets/js/main.js"></script>
 </head>
 
 <body>
+
+  {% include cookie-banner.html %}
+<script src="{{ site.baseurl }}/assets/js/cookies.js"></script>
+
 
 <div id="wrapper">
   {% include header.html %}
@@ -33,6 +40,8 @@
   </div>                          
 
 </div>
-    {% include footer.html %}
+
+{% include footer.html %}
+
 </body>
 </html>

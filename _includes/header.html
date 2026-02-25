@@ -1,21 +1,25 @@
+<a class="skip-link" href="#main-content">Skip to main content</a>
+
 <header id="TopBanner" class="topbanner">
   <div class="banner-inner">
     
     <a href="{{ site.baseurl }}/index.html" class="left-link">
       <img src="{{ site.baseurl }}/assets/img/logo.svg"
            title="Park Smarter"
-           alt="Parking sign with arrow pointing right"
-           rel="external">
+           alt="Parking sign with arrow pointing right to open the Park Smarter homepage">
     </a>
 
-    <button class="menu-toggle" aria-label="Toggle navigation menu">
+    <button class="menu-toggle"
+            aria-label="Toggle navigation menu" 
+            aria-expanded="false" 
+            aria-controls="topnav"> 
       &#9776;
     </button>
 
   </div>
 </header>
 
-<nav id="topnav">
+<nav id="topnav" aria-label="Main Navigation" role="navigation">
   <ul>
     <li><a href="{{ site.baseurl }}/pay-pcn.html">Pay PCN</a></li>
     <li><a href="{{ site.baseurl }}/dispute-pcn.html">Dispute PCN</a></li>
